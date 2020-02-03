@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#0099cc"
+    tools:context=".FullscreenActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+    <ImageView
+        android:id="@+id/postImgView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY">
+    </ImageView>
+
+    <!--    <TextView-->
+<!--        android:id="@+id/fullscreen_content"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:gravity="center"-->
+<!--        android:keepScreenOn="true"-->
+<!--        android:text="@string/dummy_content"-->
+<!--        android:textColor="#33b5e5"-->
+<!--        android:textSize="50sp"-->
+<!--        android:textStyle="bold" />-->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent"-->
+<!--        android:fitsSystemWindows="true">-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/fullscreen_content_controls"-->
+<!--            style="?metaButtonBarStyle"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="bottom|center_horizontal"-->
+<!--            android:background="@color/black_overlay"-->
+<!--            android:orientation="horizontal"-->
+<!--            tools:ignore="UselessParent">-->
+
+<!--            <Button-->
+<!--                android:id="@+id/dummy_button"-->
+<!--                style="?metaButtonBarButtonStyle"-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:text="@string/dummy_button" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="600dp"></androidx.cardview.widget.CardView>-->
+
+<!--    </FrameLayout>-->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        app:cardCornerRadius="30dp"
+        android:layout_alignParentBottom="true">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_column="2"
+                android:layout_span="1"
+
+                android:textColor="@color/colorAccent"></TextView>
+
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <TextView
+                android:layout_width="130dp"
+                android:layout_height="match_parent"
+                android:layout_column="0"
+                android:layout_span="1"
+                android:textColor="#ffff"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="51dp"
+                android:layout_column="2"
+                android:layout_span="1"
+                android:paddingTop="18dp"
+                android:text="Detected current location"
+                android:textColor="@color/colorAccent"></TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_column="2"
+                android:layout_span="1"
+                android:src="@drawable/rsz_pin"
+                android:textColor="@color/colorAccent"></ImageView>
+
+
+        </TableRow>
+
+        <EditText
+            android:id="@+id/titleET"
+            android:layout_width="wrap_content"
+            android:layout_column="2"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_span="1"
+            android:gravity="center"
+            android:hint="Location Name"
+            android:paddingTop="18dp"
+            android:text=""
+            android:textColor="@color/colorAccent"></EditText>
+        <EditText
+            android:id="@+id/descET"
+            android:layout_width="wrap_content"
+            android:layout_height="128dp"
+            android:layout_column="2"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:layout_span="1"
+            android:gravity="center"
+            android:hint="Description"
+            android:inputType="textImeMultiLine"
+            android:paddingTop="18dp"
+            android:text=""
+            android:textColor="@color/colorAccent"></EditText>
+
+        <TableRow android:layout_width="wrap_content"
+            android:layout_height="100dp">
+
+        </TableRow>
+        <Button android:id="@+id/postBtn"
+            android:layout_width="0dp"
+            android:layout_marginTop="64dp" android:text="Post!" android:textAllCaps="false" android:background="#82A660"></Button>
+    </TableLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>
